@@ -4,16 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const loading = document.getElementById('loading');
   const skillsContainer = document.getElementById('skills');
   
-  // Initialize particles
   initParticles(canvas);
   
-  // Skills data
   const skills = [
     'HTML', 'CSS', 'JS', 'PHP', 
     'Python', 'WordPress', 'SEO'
   ];
   
-  // Populate skills
   skills.forEach(skill => {
     const skillTag = document.createElement('span');
     skillTag.className = 'skill-tag';
@@ -21,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsContainer.appendChild(skillTag);
   });
   
-  // Handle loading animation
   setTimeout(() => {
     loading.style.opacity = '0';
     content.classList.remove('hidden');
